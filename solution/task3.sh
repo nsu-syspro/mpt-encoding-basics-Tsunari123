@@ -2,7 +2,7 @@
 
 # Вывести дату в формате:
 #   13 октября 2023 года, Пятница
-export LC_TIME=ru_RU.UTF-8
+export LC_TIME=en_EN.UTF-8
 
 date_input="$1"
 
