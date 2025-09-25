@@ -1,5 +1,11 @@
 #!/usr/bin/env bash
 
-# ‚ë¢¥áâ¨ ¤ âã ¢ ä®à¬ â¥:
-#   13 ®ªâï¡àï 2023 £®¤ , ïâ­¨æ 
-date '+???' -d "$@"
+# Ð’Ñ‹Ð²ÐµÑÑ‚Ð¸ Ð´Ð°Ñ‚Ñƒ Ð² Ñ„Ð¾Ñ€Ð¼Ð°Ñ‚Ðµ:
+#   13 Ð¾ÐºÑ‚ÑÐ±Ñ€Ñ 2023 Ð³Ð¾Ð´Ð°, ÐŸÑÑ‚Ð½Ð¸Ñ†Ð°
+export LC_TIME=ru_RU.UTF-8
+
+date_input="$1"
+
+formatted_date=$(date -d "$date_input" '+%e %B %Y Ð³Ð¾Ð´Ð°, %A' 2>/dev/null)
+
+echo "$formatted_date"
