@@ -1,5 +1,11 @@
 #!/usr/bin/env bash
 
-# ²ëÒÕáâØ ÔÐâã Ò äÞàÜÐâÕ:
+# Ð’Ñ‹Ð²ÐµÑÑ‚Ð¸ Ð´Ð°Ñ‚Ñƒ Ð² Ñ„Ð¾Ñ€Ð¼Ð°Ñ‚Ðµ:
 #   Freitag, 13. Oktober 2023
-date '+???' -d "$@"
+export LC_TIME=de_DE.UTF-8
+
+date_input="$1"
+
+formatted_date=$(date -d "$date_input" '+%A, %d. %B %Y' 2>/dev/null)
+
+echo "$formatted_date"
